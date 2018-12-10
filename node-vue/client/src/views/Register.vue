@@ -6,10 +6,10 @@
             </div>
             <el-form :model="register" status-icon :rules="rules" ref="registerForm" label-width="80px" class="registerForm">
                 <el-form-item label="用户名" prop="username">
-                    <el-input type="password" v-model="register.username" autocomplete="off"></el-input>
+                    <el-input type="username" v-model="register.username" autocomplete="off"></el-input>
                 </el-form-item>
                 <el-form-item label="邮箱" prop="email">
-                    <el-input type="password" v-model="register.email" autocomplete="off"></el-input>
+                    <el-input type="email" v-model="register.email" autocomplete="off"></el-input>
                 </el-form-item>
                 <el-form-item label="密码" prop="pass">
                     <el-input type="password" v-model="register.pass" autocomplete="off"></el-input>
@@ -40,7 +40,7 @@
         name: "register",
         data() {
            const validatePass2 = (rule,value,callback) => {
-               if(value !== this.register.pass2){
+               if(value !== this.register.pass){
                    callback(new Error("两次输入密码不一致!"));
                } else {
                    callback();
@@ -84,7 +84,14 @@
         },
         methods: {
             submitForm:function(formName){
-
+                this.$refs[formName].validate((valid) => {
+                    if (valid) {
+                        alert('submit!');
+                    } else {
+                        console.log('error submit!!');
+                        return false;
+                    }
+                });
             }
         }
     }
