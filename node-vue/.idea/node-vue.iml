@@ -14,5 +14,6 @@
     <orderEntry type="library" name="@types/requirejs" level="application" />
     <orderEntry type="library" name="mongoose" level="application" />
     <orderEntry type="library" name="@types/actions-on-google" level="application" />
+    <orderEntry type="library" name="node-vue node_modules" level="project" />
   </component>
 </module>

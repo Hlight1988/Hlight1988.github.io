@@ -121,7 +121,7 @@
         background-color: #fff;
         padding: 20px 40px 20px 20px;
         border-radius: 5px;
-        box-shadow: 0px 5px 10px #cccc;
+        box-shadow: 0px 5px 10px #ccc;
     }
     .submit_btn {
         width: 100%;
