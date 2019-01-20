@@ -26,7 +26,7 @@ require('./config/passport')(passport)
 const users = require('./router/api/users');
 const profiles = require('./router/api/profiles');
 
-server.use('/users',users)
-server.use('/profiles',profiles)
+server.use('/api/users',users)
+server.use('/api/profiles',profiles)
 
 server.listen(8002,console.log("Server running on 8002"))

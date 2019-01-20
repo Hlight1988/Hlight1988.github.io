@@ -92,7 +92,7 @@ router.get(
             id:req.user.id,
             name:req.user.name,
             email:req.user.email,
-            identity:req.user.identity,
+            identity:req.user.identity
         })
 
 })
